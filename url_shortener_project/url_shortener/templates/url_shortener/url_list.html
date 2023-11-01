@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL List</title>
+</head>
+<body>
+    <h1>URL List</h1>
+
+    <ul>
+        {% for url_mapping in url_mappings %}
+            <li>
+                Original URL: <a href="{{ url_mapping.long_url }}">{{ url_mapping.long_url }}</a><br>
+                Shortened URL: <a href="http://localhost:8000/{{ url_mapping.short_code }}">{{ url_mapping.short_code }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
